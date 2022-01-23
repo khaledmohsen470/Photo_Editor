@@ -10,3 +10,6 @@ if (environment.production) {
 
 platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.error(err));
+
+  // import {defineCustomElements} from '@ionic/pwa-elements/loader';
+  // defineCustomElements(window);

@@ -1,0 +1,27 @@
+<div class="container w-50 ">
+    <div class="row justify-content-center">
+        <div class="col-md-6 d-flex justify-content-center">
+            <input class="form-control btn btn-primary" type="file" (change)="readURL($event);">
+        </div>
+    </div>
+    <div class="row justify-content-center top-buffer">
+        <div class="col-md-6 d-flex justify-content-center" >
+            <img id="Image" [src]="imageSrc == null ?'./assets/Images/Image.jpg':imageSrc" height="400" alt="Image Here">
+        </div>
+       <div class="row justify-content-center">
+        <div class="col-md-6">
+          <div  *ngFor="let prop of properities;index as i " class="control control--range row">
+           <div class="col-md-4">
+            <label for="">{{prop.Name}}</label>
+           </div>
+           <div class="col-md-4">
+            <input [(ngModel)]=prop.Value (change)="ApplyFilter()"  type="range" name={{prop.Name}} min="0" max="100"  step="1">
+
+           </div>
+          </div>
+        </div>
+       </div>
+    </div>
+</div> 
+
+ <!-- <web-photo-filter src="./assets/Images/Image.jpg" filter="sepia"></web-photo-filter> -->

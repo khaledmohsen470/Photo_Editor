@@ -1,0 +1,62 @@
+<div class="container w-50 ">
+    <div class="row justify-content-center">
+        <div class="col-md-6 d-flex justify-content-center">
+            <input class="form-control btn btn-primary" type="file" (change)="readURL($event);">
+        </div>
+    </div>
+    <div class="row justify-content-center top-buffer">
+        <div class="col-md-6 d-flex justify-content-center" >
+            <img id="Image" [src]="imageSrc == null ?'./assets/Images/Image.jpg':imageSrc" height="400" alt="Image Here">
+        </div>
+       <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="control control--range">
+                <label for="">brightness</label>
+                <input (change)="ApplyFilter($event)"  type="range" name="brightness" min="0" max="100" value="50" step="1">
+              </div>
+              
+              <div class="control control--range">
+                <label for="">blur</label>
+                <input (change)="ApplyFilter($event)" type="range" name="blur" min="0" max="100"  step="1">
+              </div>
+
+              <div class="control control--range">
+                <label for="">contrast</label>
+                <input (change)="ApplyFilter($event)" type="range" name="contrast" min="0" max="200" value="100" step="1">
+              </div>
+
+
+              <div class="control control--range">
+                <label for="">grayscale</label>
+                <input (change)="ApplyFilter($event)" type="range" name="grayscale" min="-50" max="50"  step="1">
+              </div>
+
+              <div class="control control--range">
+                <label for="">hue-rotate</label>
+                <input (change)="ApplyFilter($event)" type="range" name="hue-rotate" min="-50" max="50"  step="1">
+              </div>
+
+              <div class="control control--range">
+                <label for="">invert</label>
+                <input (change)="ApplyFilter($event)" type="range" name="invert" min="-50" max="50"   step="1">
+              </div>
+
+              <div class="control control--range">
+                <label for="">opacity</label>
+                <input (change)="ApplyFilter($event)" type="range" name="opacity" min="-50" max="50"  step="1">
+              </div>
+
+              <div class="control control--range">
+                <label for="">saturate</label>
+                <input (change)="ApplyFilter($event)" type="range" name="saturate" min="-50" max="50"   step="1">
+              </div>
+
+              <div class="control control--range">
+                <label for="">sepia</label>
+                <input (change)="ApplyFilter($event)" type="range" name="sepia" min="-50" max="50"  step="1">
+              </div>
+
+        </div>
+       </div>
+    </div>
+</div>

@@ -24,9 +24,18 @@
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              {"glob": "webphotofilter.js",
+                "input": "node_modules/web-photo-filter/dist",
+              "output": "./"
+               },
+               {"glob": "webphotofilter/*",
+                "input": "node_modules/web-photo-filter/dist",
+              "output": "./"
+               }
             ],
             "styles": [
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []
